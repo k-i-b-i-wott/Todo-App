@@ -1,0 +1,35 @@
+form{
+    max-width: 70vh !important;
+    padding: 1rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    box-sizing: border-box;
+    -webkit-box-shadow: -9px 9px 24px 9px rgba(196,154,196,1);
+    -moz-box-shadow: -9px 9px 24px 9px rgba(196,154,196,1);
+    box-shadow: -9px 9px 24px 9px rgba(196,154,196,1);
+    border-radius: .5rem;
+}
+
+input{
+        
+    width: 100%;
+    padding: .5rem;
+}
+
+button{
+    padding: .5rem;
+    width: 100%;
+    
+}
+
+.hero{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    
+}

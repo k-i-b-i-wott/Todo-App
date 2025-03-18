@@ -6,7 +6,7 @@ const TodoItem = ({title, description, completed}) => {
       <h1 className={completed ? `todo-title completed` : `todo-title`}>{title}</h1>      
       <p className={completed ? `completed` : ``}>{description}</p>
       <div className="todo-items-control">
-        <button>Mark as Complete</button>
+        <button className='complete'>Mark as Complete</button>
         <button className='delete'>Delete</button>
       </div>
     </div>

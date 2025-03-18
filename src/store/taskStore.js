@@ -2,13 +2,13 @@ import { create } from "zustand";
 function taskStore(set) {
     return {
         ///state
-        tasks: [],
+        tasks: [{title: "Learn Zystand", description:"BCEUWECUWWNCECINIOERNOEWCOEOCNE" ,completed: false , id: 1}],
         ///Logic updating the state
-        addTask: (task) => {
-            set((state) => ({
-                tasks: [...state.tasks, task],
-            }));
-        },
+        // addTask: (task) => {
+        //     set((state) => ({
+        //         tasks: [...state.tasks, task],
+        //     }));
+        // },
     };
 }
 

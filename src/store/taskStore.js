@@ -1,4 +1,6 @@
 import { create } from "zustand";
+
+import{devtools,persist} from 'zustand/middleware'
 function taskStore(set) {
     return {
         ///state
@@ -48,6 +50,6 @@ function taskStore(set) {
     };
 }
 
-const useTaskstore = create(taskStore);
+const useTaskstore = create(devtools(persist(taskStore, {name: "taskStore"})));
 
 export default useTaskstore

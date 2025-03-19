@@ -9,6 +9,22 @@ function taskStore(set) {
                 return({tasks:[task, ...previousState.tasks]})
             })
         },
+        markComplete: function(taskId){
+            set( function(previousState){
+                set(function(previousState){
+                    const updatedTasks = previousState.tasks.map((task)=>{
+                        if(task.id === taskId){
+                            task.completed = true;
+                            return task;
+                        }
+                        return task;
+                    })
+                    return({tasks:updatedTasks})
+                })
+
+            })
+
+        }
     };
 }
 

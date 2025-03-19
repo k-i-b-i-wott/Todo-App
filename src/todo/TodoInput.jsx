@@ -42,7 +42,7 @@ const TodoInput = () => {
        <form >
                 <input type="text"  value={taskTitle} onChange={(e) => setTaskTitle(e.target.value)} placeholder="Enter your todo Title" />
                 <input type="text" value={taskDescription} onChange={(e) => setTaskDescription(e.target.value)} placeholder="Enter your todo Description" />
-                <button type="submit" onClick={handleAddTask}>Add todo</button>
+                <button type="submit" onClick={handleAddTask} className='add'>Add todo</button>
             </form>
     </div>
   )

@@ -5,9 +5,15 @@ import './Todo.css'
 const TodoItem = ({title, description, completed,id}) => {
   const markTaskAsComplete = useTaskstore((state) => state.markComplete);
 
+  const markAsIncomplete = useTaskstore((state) => state.markIncomplete);
+
   function handleMarksAsComplete(e) {
     e.preventDefault();
     markTaskAsComplete(id);
+  }
+  function handleMarksAsIncomplete(e) {
+    e.preventDefault();
+    markAsIncomplete(id);
   }
   return (
     <div className='todo-item'>
@@ -15,7 +21,7 @@ const TodoItem = ({title, description, completed,id}) => {
       <p className={completed ? `completed` : ``}>{description}</p>
       <div className="todo-items-control">
         <button className='complete' 
-        onClick={handleMarksAsComplete}>
+        onClick={completed ? handleMarksAsIncomplete : handleMarksAsComplete}>
           {completed ? `Mark as incomplete` : `Mark as complete`}
           
           </button>

@@ -10,7 +10,6 @@ function taskStore(set) {
             })
         },
         markComplete: function(taskId){
-            set( function(previousState){
                 set(function(previousState){
                     const updatedTasks = previousState.tasks.map((task)=>{
                         if(task.id === taskId){
@@ -20,11 +19,23 @@ function taskStore(set) {
                         return task;
                     })
                     return({tasks:updatedTasks})
+                })          
+
+        },
+
+        markIncomplete: function(taskId){
+            set(function(previousState){
+                const updatedTasks = previousState.tasks.map((task)=>{
+                    if(task.id === taskId){
+                        task.completed = false;
+                        return task;
+                    }
+                    return task;
                 })
+                return({tasks:updatedTasks})
+            })          
 
-            })
-
-        }
+        },
     };
 }
 

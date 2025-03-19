@@ -120,3 +120,9 @@ button{
 .todo-items-display{
   display: flex;
 }
+.todo-title-completed{
+    text-decoration: line-through;
+}
+.completed{
+    text-decoration: line-through;
+}

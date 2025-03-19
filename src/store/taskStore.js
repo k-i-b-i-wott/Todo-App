@@ -36,6 +36,15 @@ function taskStore(set) {
             })          
 
         },
+
+        deleteTask: function(taskId){
+            set(function(previousState){
+                const remainingTasks = previousState.tasks.filter((task)=>{
+                    return task.id !== taskId;
+                })
+                return({tasks:remainingTasks})
+            })  
+        }
     };
 }
 

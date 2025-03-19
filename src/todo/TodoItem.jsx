@@ -6,6 +6,7 @@ const TodoItem = ({title, description, completed,id}) => {
   const markTaskAsComplete = useTaskstore((state) => state.markComplete);
 
   const markAsIncomplete = useTaskstore((state) => state.markIncomplete);
+  const deleteTask = useTaskstore((state) => state.deleteTask);
 
   function handleMarksAsComplete(e) {
     e.preventDefault();
@@ -15,9 +16,13 @@ const TodoItem = ({title, description, completed,id}) => {
     e.preventDefault();
     markAsIncomplete(id);
   }
+  function handleDeleteTask(e) {
+    e.preventDefault();
+    deleteTask(id);
+  }
   return (
     <div className='todo-item'>
-      <h1 className={completed ? `todo-title completed` : `todo-title`}>{title}</h1>      
+      <h1 className={completed ? `todo-title-completed` : `todo-title`}>{title}</h1>      
       <p className={completed ? `completed` : ``}>{description}</p>
       <div className="todo-items-control">
         <button className='complete' 
@@ -25,7 +30,7 @@ const TodoItem = ({title, description, completed,id}) => {
           {completed ? `Mark as incomplete` : `Mark as complete`}
           
           </button>
-        <button className='delete'>Delete</button>
+        <button className='delete' onClick={handleDeleteTask}>Delete</button>
       </div>
     </div>
   )

@@ -42,21 +42,20 @@ button{
     background-color: rgb(106, 233, 218);
 }
 .todo-items{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    max-width: 20rem !important;
-    width: 100% !important;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background-color: aliceblue;
-    padding: .2rem;
-    border-radius: .5rem;
-    box-sizing: border-box;
-    -webkit-box-shadow: -9px 9px 24px 9px white;
-    -moz-box-shadow: -9px 9px 24px 9px hsl(300, 17%, 98%);
-    box-shadow: -9px 9px 24px 9px #f1eff1;
+  display: flex;
+  gap: 2rem;
+    
+}
+.todo-item{
+   padding: 1rem 2rem;
+   align-items: center;
+   justify-content: center;
+   border-radius: 1.5rem;
+   width: 100%;
+
+    -webkit-box-shadow: 3px -1px 5px 9px rgba(0,0,0,0.34);
+    -moz-box-shadow: 3px -1px 5px 9px rgba(0,0,0,0.34);
+    box-shadow: 3px -1px 5px 9px rgba(0,0,0,0.34);
 }
 .todo-items-control{
     display: flex;
@@ -89,7 +88,7 @@ button{
     justify-content: center;
     
 }
-.hero h1{
+.hero h3{
     color: white;
     font-size: 2rem;
     background-color: rgb(66, 66, 223);
@@ -99,6 +98,7 @@ button{
     color: white;
     font-size: 2rem;
 }
+
 /* hero section */
 
 .hero{
@@ -117,9 +117,7 @@ button{
     
 }
 
-.todo-items-display{
-  display: flex;
-}
+
 .todo-title-completed{
     text-decoration: line-through;
 }

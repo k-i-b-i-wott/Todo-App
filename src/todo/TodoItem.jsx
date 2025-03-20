@@ -22,7 +22,7 @@ const TodoItem = ({title, description, completed,id}) => {
   }
   return (
     <div className='todo-item'>
-      <h1 className={completed ? `todo-title-completed` : `todo-title`}>{title}</h1>      
+      <h3 className={completed ? `todo-title-completed` : `todo-title`}>{title}</h3>      
       <p className={completed ? `completed` : ``}>{description}</p>
       <div className="todo-items-control">
         <button className='complete' 

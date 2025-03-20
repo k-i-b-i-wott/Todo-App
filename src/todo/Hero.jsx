@@ -17,12 +17,10 @@ const Hero = () => {
          <h1>{now()} Tanui</h1>
       <h4>You have {numberofIncompleteTasks} todos remaining today</h4>
       <TodoInput />
-      </section>
-      <div className="todo-items-display">
-        <TodoItems />        
-      </div>  
+      </section>      
    </div>
   )
 }
 
 export default Hero
+

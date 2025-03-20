@@ -9,7 +9,7 @@ const TodoItems = () => {
   return (
     <div className='todo-items'>
       {
-        task.map((item)=><TodoItem key={item.id} title={item.title} description={item.description} completed={item.completed} id={item.id}/>)
+        task.map((item)=><TodoItem key={item.id} title={item.title} description={item.description} completed={item.completed} timeRemaining={item.timeRemaining} id={item.id}/>)
       }
     </div>
   )

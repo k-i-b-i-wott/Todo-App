@@ -18,6 +18,15 @@ input{
         
     width: 100%;
     padding: .5rem;
+    border-radius: .5rem;
+}
+textarea{
+    width: 100% !important;
+    padding: .5rem;
+    border-radius: .3rem;
+    text-align: center;
+    padding-top: .5rem;
+    font-weight: 700;
 }
 
 button{

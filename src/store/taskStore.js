@@ -46,7 +46,19 @@ function taskStore(set) {
                 })
                 return({tasks:remainingTasks})
             })  
-        }
+        },
+        setTimer: function(taskId, newTimer){
+            set(function(previousState){
+                const updatedTasks = previousState.tasks.map((task)=>{
+                    if(task.id === taskId){
+                        return {...task, timeRemaining:Math.max(newTimer,0)};
+                    }
+                    return task;
+                })
+                return({tasks:updatedTasks})
+            })  ;
+        },
+            
     };
 }
 

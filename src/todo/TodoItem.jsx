@@ -62,7 +62,7 @@ const TodoItem = ({title, description, completed,id, timeRemaining}) => {
           </button>
         <button className='delete' onClick={handleDeleteTask}>Delete</button>
         <p className={`timer ${timeLeft <= 0 ? 'timer-expired' : 'timer-active'}`}>
-        {timeLeft <= 0 ? '⏳ Incomplete Task' : `⏳ Time Left: ${formatTime(timeLeft)}`}
+        {timeLeft <= 0 ? 'Incomplete Task' : `Time Left: ${formatTime(timeLeft)}`}
       </p>
       </div>
     </div>

@@ -1,5 +1,5 @@
 form{
-    min-width: 70vh !important;
+    min-width: 50vw;
     padding: 1rem;
     width: 100% !important;
     justify-content: center;
@@ -12,6 +12,9 @@ form{
     -moz-box-shadow: -9px 9px 24px 9px rgba(196,154,196,1);
     box-shadow: -9px 9px 24px 9px rgba(196,154,196,1);
     border-radius: .5rem;
+}
+.hero{
+    overflow-x: hidden;
 }
 
 input{
@@ -51,16 +54,18 @@ button{
     background-color: rgb(106, 233, 218);
 }
 .todo-items{
-  display: flex;
-  gap: 2rem;
-    
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap !important;
 }
 .todo-item{
    padding: 1rem 2rem;
    align-items: center;
    justify-content: center;
    border-radius: 1.5rem;
+   max-width: 20rem;
    width: 100%;
+   overflow: hidden;
 
     -webkit-box-shadow: 3px -1px 5px 9px rgba(0,0,0,0.34);
     -moz-box-shadow: 3px -1px 5px 9px rgba(0,0,0,0.34);

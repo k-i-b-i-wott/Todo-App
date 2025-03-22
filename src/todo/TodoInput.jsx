@@ -25,6 +25,10 @@ const TodoInput = () => {
         alert("Please input the task description");
         return;
     }
+    if(!time){
+        alert("Please input the task deadline");
+        return;
+    }
     const timeInMilliseconds= time*60*60*1000;
     const newTask={
         id:Math.random()*1_000_000_000_000,
